@@ -674,19 +674,6 @@ def students_with_unpaid_fees():
     if not found:
         print("All students have paid their fees.")
 
-def top_students():
-    students_with_marks = []
-    for student_id, info in students.items():
-        if "marks" in info:
-            students_with_marks.append(
-                (student_id, info["name"], info["marks"])
-            )
-    students_with_marks.sort(
-        key=lambda x: x[2],
-        reverse=True
-    )
-
-
 
 
 def school_overall_statistics():
@@ -712,7 +699,6 @@ def school_overall_statistics():
     print(f"Total Teachers:       {total_teachers}")
     print(f"Active Teachers:      {active_teachers_count}")
     print("========================================")
-initialize_teachers_json()
 initialize_teachers_json()
 while True:
     print("\n")
@@ -800,35 +786,32 @@ while True:
             inactive_teachers()
         elif choice == 20:
             search_teacher_by_subject()
-        # elif choice == 21:
-        #     teacher_statistics()
-        elif choice == 22:
+
+        elif choice == 21:
             update_student_marks()
-        elif choice == 23:
+        elif choice == 22:
             show_student_result()
-        elif choice == 24:
-            top_students()
-        elif choice == 25:
+        elif choice == 23:
             update_student_attendance()
-        elif choice == 26:
+        elif choice == 24:
             show_student_attendance()
-        elif choice == 27:
+        elif choice == 25:
             students_with_low_attendance()
 
-        elif choice == 28:
+        elif choice == 26:
             student_contact()
 
-        elif choice == 29:
+        elif choice == 27:
             students_with_unpaid_fees()
-        elif choice == 30:
+        elif choice == 28:
             school_overall_statistics()
-        elif choice == 31:
+        elif choice == 29:
             exit_system()
             break
         else:
             print(
                 "Invalid choice! "
-                "Choose a number between 1 and 31."
+                "Choose a number between 1 and 29."
             )
     except ValueError:
         print("Please enter a valid number.")
