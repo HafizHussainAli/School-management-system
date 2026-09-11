@@ -1,0 +1,137 @@
+{
+    "201": {
+        "name": "Ahmed Raza",
+        "age": 35,
+        "subject": "Mathematics",
+        "class": "8th",
+        "experience": 10,
+        "phone": "03001234567",
+        "active": true
+    },
+    "202": {
+        "name": "Sana Malik",
+        "age": 32,
+        "subject": "English",
+        "class": "9th",
+        "experience": 7,
+        "phone": "03111234567",
+        "active": true
+    },
+    "203": {
+        "name": "Bilal Khan",
+        "age": 41,
+        "subject": "Physics",
+        "class": "10th",
+        "experience": 15,
+        "phone": "03221234567",
+        "active": false
+    },
+    "204": {
+        "name": "Ayesha Noor",
+        "age": 29,
+        "subject": "Computer Science",
+        "class": "11th",
+        "experience": 5,
+        "phone": "03331234567",
+        "active": true
+    },
+    "205": {
+        "name": "Usman Ali",
+        "age": 38,
+        "subject": "Chemistry",
+        "class": "12th",
+        "experience": 12,
+        "phone": "03441234567",
+        "active": true
+    },
+    "206": {
+        "name": "Fatima Zahra",
+        "age": 34,
+        "subject": "Biology",
+        "class": "10th",
+        "experience": 9,
+        "phone": "03051234567",
+        "active": false
+    },
+    "207": {
+        "name": "Hassan Ahmed",
+        "age": 45,
+        "subject": "Urdu",
+        "class": "8th",
+        "experience": 18,
+        "phone": "03161234567",
+        "active": true
+    },
+    "208": {
+        "name": "Maria Khan",
+        "age": 31,
+        "subject": "Islamiyat",
+        "class": "9th",
+        "experience": 6,
+        "phone": "03271234567",
+        "active": true
+    },
+    "209": {
+        "name": "Omar Farooq",
+        "age": 39,
+        "subject": "Mathematics",
+        "class": "11th",
+        "experience": 13,
+        "phone": "03381234567",
+        "active": false
+    },
+    "210": {
+        "name": "Khadija Ahmed",
+        "age": 28,
+        "subject": "English",
+        "class": "7th",
+        "experience": 4,
+        "phone": "03491234567",
+        "active": true
+    },
+    "211": {
+        "name": "Muhammad Usman",
+        "age": 43,
+        "subject": "Physics",
+        "class": "12th",
+        "experience": 16,
+        "phone": "03011234567",
+        "active": true
+    },
+    "212": {
+        "name": "Zoya Hassan",
+        "age": 30,
+        "subject": "Computer Science",
+        "class": "10th",
+        "experience": 5,
+        "phone": "03121234567",
+        "active": false
+    },
+    "213": {
+        "name": "Ali Raza",
+        "age": 36,
+        "subject": "Chemistry",
+        "class": "11th",
+        "experience": 11,
+        "phone": "03231234567",
+        "active": true
+    },
+    "214": {
+        "name": "Mariam Tariq",
+        "age": 33,
+        "subject": "Biology",
+        "class": "9th",
+        "experience": 8,
+        "phone": "03341234567",
+        "active": true
+    },
+    "215": {
+        "name": "Saad Ahmed",
+        "age": 47,
+        "subject": "History",
+        "class": "8th",
+        "experience": 20,
+        "phone": "03451234567",
+        "active": false
+    }
+}
