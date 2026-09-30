@@ -24,7 +24,30 @@ students = {
     119: {"name": "Ibrahim Qureshi", "age": 13, "class": "7th", "active": True},
     120: {"name": "Sana Mirza", "age": 17, "class": "11th", "active": False}
 }
+def ask_yes_no(prompt):
+    while True:
+        answer = input(prompt + " (yes/no): ").strip().lower()
+        if answer in ("yes", "no"):
+            return answer == "yes"
+        print("Please type only 'yes' or 'no'.")
+        
+def ask_name(prompt):
+    while True:
+        name = input(prompt).strip()
+        if name:
+            return name
+        print("Name cannot be empty.")
 
+def ask_int_in_range(prompt, low, high):
+    while True:
+        try:
+            value = int(input(prompt))
+        except ValueError:
+            print("Please enter a number.")
+            continue
+        if low <= value <= high:
+            return value
+        print(f"Value must be between {low} and {high}.")
 def save_to_json():
     with open(JSON_FILE, mode="w", encoding="utf-8") as file:
 
@@ -54,25 +77,36 @@ def search_by_id():
         print("Please enter a valid numeric ID.")
 
 def new_student():
-    try:
-        student_id = int(input("Enter student ID: "))
+    while True:
+        student_id = ask_int_in_range("Enter student ID: ", 1, 999999)
         if student_id in students:
-            print("A student with this ID already exists!")
-            return
-        student_name = input("Enter student name: ").strip()
-        student_age = int(input("Enter student age: "))
-        student_class = input("Enter student class: ").strip()
-        active = input("Is the student active? (yes/no): ").strip().lower() == "yes"
-        students[student_id] = {
-            "name": student_name,
-            "age": student_age,
-            "class": student_class,
-            "active": active
-        }
-        save_to_json()
-        print("Student added successfully!")
-    except ValueError:
-        print("Invalid input! Age and ID must be numbers.")
+            print("A student with this ID already exists! Try another.")
+        else:
+            break
+
+    student_name = ask_name("Enter student name: ")
+    student_age = ask_int_in_range("Enter student age (5-25): ", 5, 25)
+
+    while True:
+        student_class = input("Enter student class (e.g. 8th): ").strip()
+        if student_class:
+            break
+        print("Class cannot be empty.")
+
+    active = ask_yes_no("Is the student active?")
+    student_phone = input("Enter student phone: ").strip()
+    fees_paid = ask_yes_no("Has the student paid fees?")
+
+    students[student_id] = {
+        "name": student_name,
+        "age": student_age,
+        "class": student_class,
+        "active": active,
+        "phone": student_phone,
+        "fees_paid": fees_paid
+    }
+    save_to_json()
+    print("Student added successfully!")
 
 def all_students():
     print(f"\n{'ID':<8} {'Name':<20} {'Age':<8} {'Class':<8} {'Active':<8}")
@@ -99,60 +133,77 @@ def search_by_name():
     if not found:
         print("Student not found!")
 
+
 def delete_student():
     try:
         student_id = int(input("Enter student ID to delete: "))
         if student_id in students:
-            del students[student_id]
-            save_to_json()
-            print(f"Student {student_id} deleted successfully!")
+            name = students[student_id]["name"]
+            if ask_yes_no(f"Are you sure you want to delete {name}?"):
+                del students[student_id]
+                save_to_json()
+                print(f"Student {student_id} deleted successfully!")
+            else:
+                print("Deletion cancelled.")
         else:
             print("Student ID not found!")
     except ValueError:
         print("Please enter a valid numeric ID.")
 
+
 def update_student():
     try:
         student_id = int(input("Enter student ID to update: "))
-        if student_id not in students:
-            print("Student ID not found!")
-            return
-        print("\nCurrent Student Information:")
-        print(f"Name: {students[student_id]['name']}")
-        print(f"Age: {students[student_id]['age']}")
-        print(f"Class: {students[student_id]['class']}")
-        print(f"Active: {students[student_id]['active']}")
-        print("\nWhat do you want to update?")
-        print("1. Name")
-        print("2. Age")
-        print("3. Class")
-        print("4. Active Status")
-        choice = input("Choose an option: ")
-        if choice == "1":
-            new_name = input("Enter new name: ").strip()
-            students[student_id]["name"] = new_name
-        elif choice == "2":
-            new_age = int(input("Enter new age: "))
-            students[student_id]["age"] = new_age
-        elif choice == "3":
-            new_class = input("Enter new class: ").strip()
-            students[student_id]["class"] = new_class
-        elif choice == "4":
-            new_status = input("Is the student active? (yes/no): ").strip().lower()
-            if new_status == "yes":
-                students[student_id]["active"] = True
-            elif new_status == "no":
-                students[student_id]["active"] = False
-            else:
-                print("Please enter yes or no.")
-                return
-        else:
-            print("Invalid option!")
-            return
-        save_to_json()
-        print("\nStudent information updated successfully!")
     except ValueError:
-        print("Please enter a valid number.")
+        print("Please enter a valid numeric ID.")
+        return
+
+    if student_id not in students:
+        print("Student ID not found!")
+        return
+
+    student = students[student_id]
+
+    print("\nCurrent Student Information:")
+    print(f"Name: {student['name']}")
+    print(f"Age: {student['age']}")
+    print(f"Class: {student['class']}")
+    print(f"Active: {student['active']}")
+    print(f"Phone: {student.get('phone', 'Not available')}")
+    print(f"Fees Paid: {student.get('fees_paid', 'Not available')}")
+
+    print("\nWhat do you want to update?")
+    print("1. Name")
+    print("2. Age")
+    print("3. Class")
+    print("4. Active Status")
+    print("5. Phone")
+    print("6. Fees Paid")
+    choice = input("Choose an option: ").strip()
+
+    if choice == "1":
+        student["name"] = ask_name("Enter new name: ")
+    elif choice == "2":
+        student["age"] = ask_int_in_range("Enter new age (5-25): ", 5, 25)
+    elif choice == "3":
+        while True:
+            new_class = input("Enter new class (e.g. 8th): ").strip()
+            if new_class:
+                student["class"] = new_class
+                break
+            print("Class cannot be empty.")
+    elif choice == "4":
+        student["active"] = ask_yes_no("Is the student active?")
+    elif choice == "5":
+        student["phone"] = input("Enter new phone: ").strip()
+    elif choice == "6":
+        student["fees_paid"] = ask_yes_no("Has the student paid fees?")
+    else:
+        print("Invalid option!")
+        return
+
+    save_to_json()
+    print("\nStudent information updated successfully!")
 
 
 

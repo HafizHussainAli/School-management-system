@@ -1,197 +1,29 @@
 {
     "101": {
-        "name": "Aarav Sharma",
+        "name": "Alex Morgan",
         "age": 14,
         "class": "8th",
         "active": true,
-        "attendance": 80,
+        "attendance": 85,
         "fees_paid": true,
-        "phone": "0300 33334343"
+        "phone": "0000000000"
     },
     "102": {
-        "name": "Fatima Zahra",
+        "name": "Emma Carter",
         "age": 15,
         "class": "9th",
         "active": true,
-        "attendance": 68,
+        "attendance": 72,
         "fees_paid": false,
-        "phone": "0300 8965345"
+        "phone": "0000000000"
     },
     "103": {
-        "name": "Bilal Ahmed",
+        "name": "Ryan Wilson",
         "age": 16,
         "class": "10th",
         "active": false,
         "attendance": 91,
         "fees_paid": true,
-        "phone": "0300 3895846"
-    },
-    "104": {
-        "name": "Sara Khan",
-        "age": 14,
-        "class": "8th",
-        "active": true,
-        "attendance": 89,
-        "fees_paid": false,
-        "phone": "0300 3897459"
-    },
-    "105": {
-        "name": "Zayn Malik",
-        "age": 15,
-        "class": "9th",
-        "active": false,
-        "attendance": 77,
-        "fees_paid": false,
-        "phone": "0300 3985844"
-    },
-    "106": {
-        "name": "Ananya Patel",
-        "age": 16,
-        "class": "10th",
-        "active": true,
-        "attendance": 58,
-        "fees_paid": true,
-        "phone": "0334 3894537"
-    },
-    "107": {
-        "name": "Hamza Ali",
-        "age": 13,
-        "class": "7th",
-        "active": true,
-        "attendance": 75,
-        "fees_paid": true,
-        "phone": "0321 3895840"
-    },
-    "108": {
-        "name": "Mariam Tariq",
-        "age": 15,
-        "class": "9th",
-        "active": true,
-        "attendance": 56,
-        "fees_paid": true,
-        "phone": "0321 3845284"
-    },
-    "109": {
-        "name": "Rohan Gupta",
-        "age": 17,
-        "class": "11th",
-        "active": false,
-        "attendance": 76,
-        "fees_paid": true,
-        "phone": "0321 3854648"
-    },
-    "110": {
-        "name": "Ayesha Siddiqui",
-        "age": 14,
-        "class": "8th",
-        "active": true,
-        "attendance": 73,
-        "fees_paid": true,
-        "phone": "0321 3895849"
-    },
-    "111": {
-        "name": "Usman Sheikh",
-        "age": 16,
-        "class": "10th",
-        "active": true,
-        "attendance": 69,
-        "fees_paid": true,
-        "phone": "0321 3895859"
-    },
-    "112": {
-        "name": "Diya Sen",
-        "age": 13,
-        "class": "7th",
-        "active": false,
-        "attendance": 75,
-        "fees_paid": false,
-        "phone": "0321 3895843"
-    },
-    "113": {
-        "name": "Omar Farooq",
-        "age": 18,
-        "class": "12th",
-        "active": true,
-        "attendance": 82,
-        "fees_paid": false,
-        "phone": "0321 3895849"
-    },
-    "114": {
-        "name": "Khadija Noor",
-        "age": 15,
-        "class": "9th",
-        "active": true,
-        "attendance": 74,
-        "fees_paid": true,
-        "phone": "0321 3895839"
-    },
-    "115": {
-        "name": "Kabir Mehta",
-        "age": 17,
-        "class": "11th",
-        "active": true,
-        "attendance": 59,
-        "fees_paid": false,
-        "phone": "0321 3885887"
-    },
-    "116": {
-        "name": "Zoya Akhtar",
-        "age": 14,
-        "class": "8th",
-        "active": false,
-        "attendance": 83,
-        "fees_paid": true,
-        "phone": "0321 3895843"
-    },
-    "117": {
-        "name": "Mustafa Raza",
-        "age": 16,
-        "class": "10th",
-        "active": true,
-        "attendance": 68,
-        "fees_paid": true,
-        "phone": "0321 3897848"
-    },
-    "118": {
-        "name": "Pooja Verma",
-        "age": 18,
-        "class": "12th",
-        "active": true,
-        "attendance": 49,
-        "fees_paid": false,
-        "phone": "0321 9845843"
-    },
-    "119": {
-        "name": "Ibrahim Qureshi",
-        "age": 13,
-        "class": "7th",
-        "active": true,
-        "attendance": 71,
-        "fees_paid": true,
-        "phone": "0321 3976843"
-    },
-    "120": {
-        "name": "Sana Mirza",
-        "age": 17,
-        "class": "11th",
-        "active": false,
-        "attendance": 87,
-        "fees_paid": true,
-        "phone": "0321 8973843"
-    },
-    "125": {
-        "name": "Hassan ali",
-        "age": 18,
-        "class": "10",
-        "active": true,
-        "attendance": 70.0,
-        "fees_paid": false,
-        "phone": "0321 3895476"
-    },
-    "121": {
-        "name": "yahya",
-        "age": 11,
-        "class": "7",
-        "active": true
+        "phone": "0000000000"
     }
 }
