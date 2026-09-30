@@ -81,7 +81,7 @@ def all_students():
         print(f"{s_id:<8} {info['name']:<20} {info['age']:<8} {info['class']:<8} {str(info['active']):<8}")
 
 def exit_system():
-    print("Good Bye!")
+    print("Good Bye! Best of Luck!")
 
 def search_by_name():
     student_name = input("Enter student name: ").strip().lower()
